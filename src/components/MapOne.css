@@ -1,0 +1,117 @@
+.map-section__intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.map-section__count-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(5rem, 12vw, 9.375rem);
+  line-height: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--td-theme-primary);
+  margin: 0;
+}
+
+.map-section__text p {
+  line-height: var(--lh-link);
+  color: var(--td-grey-2);
+  margin: 0;
+}
+
+.map-section__visual {
+  position: relative;
+}
+
+.map-section__visual img {
+  width: 100%;
+  height: auto;
+}
+
+.map-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--td-theme-primary);
+}
+
+.map-dot::before,
+.map-dot::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180%;
+  height: 180%;
+  border-radius: 50%;
+  border: 1px solid rgba(32, 40, 45, 0.2);
+  animation: map-pulse 2s ease-out infinite;
+}
+
+.map-dot::after {
+  animation-delay: 1s;
+}
+
+.map-dot--india {
+  top: 50%;
+  left: 68%;
+}
+
+.map-dot--us {
+  top: 33%;
+  left: 22%;
+}
+
+.map-dot--europe {
+  top: 25%;
+  left: 52%;
+}
+
+.map-dot--australia {
+  top: 72%;
+  left: 78%;
+}
+
+.map-dot--middle-east {
+  top: 42%;
+  left: 58%;
+}
+
+.map-dot--singapore {
+  top: 58%;
+  left: 74%;
+}
+
+.map-dot--malaysia {
+  top: 55%;
+  left: 71%;
+}
+
+@keyframes map-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-section__intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .map-section__count-title {
+    font-size: clamp(4rem, 20vw, 5rem);
+  }
+}
