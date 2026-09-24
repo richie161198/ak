@@ -1,0 +1,107 @@
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: #f8fafc;
+}
+
+.site-bg__gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 120% 80% at 10% -20%,
+      rgba(245, 249, 255, 1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 80% 60% at 90% 10%,
+      rgba(32, 40, 45, 0.04) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 50% 100%,
+      rgba(139, 154, 164, 0.12) 0%,
+      transparent 55%
+    ),
+    linear-gradient(180deg, #fafbfc 0%, #ffffff 40%, #f5f9ff 100%);
+}
+
+.site-bg__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  animation: site-bg-float 22s ease-in-out infinite;
+}
+
+.site-bg__orb--1 {
+  width: min(520px, 65vw);
+  height: min(520px, 65vw);
+  top: -12%;
+  right: -8%;
+  background: linear-gradient(135deg, rgba(32, 40, 45, 0.12), rgba(74, 92, 102, 0.08));
+  animation-delay: 0s;
+}
+
+.site-bg__orb--2 {
+  width: min(440px, 55vw);
+  height: min(440px, 55vw);
+  bottom: 5%;
+  left: -12%;
+  background: linear-gradient(135deg, rgba(139, 154, 164, 0.2), rgba(245, 249, 255, 0.3));
+  animation-delay: -7s;
+}
+
+.site-bg__orb--3 {
+  width: min(360px, 45vw);
+  height: min(360px, 45vw);
+  top: 42%;
+  left: 35%;
+  background: rgba(32, 40, 45, 0.07);
+  animation-delay: -14s;
+}
+
+.site-bg__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(32, 40, 45, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(32, 40, 45, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black 15%, transparent 72%);
+  opacity: 0.7;
+  animation: site-bg-grid-drift 50s linear infinite;
+}
+
+@keyframes site-bg-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, 4%) scale(1.06);
+  }
+  66% {
+    transform: translate(-3%, -3%) scale(0.97);
+  }
+}
+
+@keyframes site-bg-grid-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 72px 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-bg__orb,
+  .site-bg__grid {
+    animation: none;
+  }
+}

@@ -80,15 +80,16 @@ export function ContactUs() {
     <section className="contact full-section" id="schedule">
       <div className="container">
         <div className="contact__grid">
-          <div className="contact__form-col">
-            <div className="contact__content">
+          <div className="contact__form-col card contact__panel">
+            <header className="contact__content">
+              <span className="eyebrow">Get in touch</span>
               <h2 className="contact__title">Schedule a call</h2>
               <p>
                 If your portfolio feels scattered, or you're unsure where to
                 begin, let's sit together. One meaningful conversation can shift
                 the way you look at your money — forever.
               </p>
-            </div>
+            </header>
 
             {result && (
               <p

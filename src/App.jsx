@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import KnowSection from "./components/KnowSection";
 import ProcessSection from "./components/ProcessSection";
 import ProductsSection from "./components/ProductsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import { FooterThree } from "./components/footer2";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import { FaqTwo } from "./components/faq";
@@ -15,10 +16,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <KnowSection />
-        <ProcessSection />
         <ProductsSection />
-
+        <ProcessSection />
+        <KnowSection />
+        <TestimonialsSection />
         <MapOne />
         <FaqTwo />
         <ContactUs />

@@ -1,4 +1,4 @@
-import { navLinks } from "../data/content";
+import { LOGIN_URL, navLinks } from "../data/content";
 // import logo from "../assets/img/logo/w1.png";
 import logo from "../assets/img/logo/logo-2.png";
 import "./Navbar.css";
@@ -20,12 +20,12 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://aktineu.investwell.app/app/#/login"
+          href={LOGIN_URL}
           className="navbar__login-btn"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Login
+           Login
         </a>
       </div>
     </header>

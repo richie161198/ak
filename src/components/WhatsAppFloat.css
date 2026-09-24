@@ -9,16 +9,17 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #25d366;
-  color: var(--td-common-white);
+  background: linear-gradient(145deg, var(--brand-accent) 0%, var(--brand-accent-hover) 100%);
+  color: var(--brand-on-accent);
   font-size: 1.75rem;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 28px rgba(11, 234, 162, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .whatsapp-float:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(11, 234, 162, 0.55);
 }
 
 @media (max-width: 768px) {

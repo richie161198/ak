@@ -1,92 +1,134 @@
-.products__wrapper {
-  padding: 2.5rem 2rem;
-  text-align: center;
-  width: 100%;
+.products {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0 4.5rem;
+  background: var(--td-common-white);
 }
 
-.products__title {
-  font-size: var(--text-section);
-  font-weight: var(--fw-semibold);
-  line-height: var(--lh-heading);
-  color: var(--td-theme-primary);
-  margin-bottom: 1.5rem;
+.products__inner {
+  position: relative;
 }
 
-.products__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem 0.25rem;
-  margin-bottom: 2.5rem;
+.products__header {
+  margin-bottom: 1.75rem;
 }
 
-.products__item {
-  display: inline-flex;
-  align-items: center;
-}
-
-.products__abbr {
+.products__heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: var(--fw-medium);
-  line-height: var(--lh-display);
-  color: var(--td-theme-primary);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-sm);
-  transition: background 0.2s ease;
-  cursor: default;
+  color: var(--td-grey-2);
+  text-align: center;
 }
 
-.products__abbr:hover {
-  background: rgba(32, 40, 45, 0.06);
-}
-
-.products__separator {
-  font-size: 1.25rem;
-  color: var(--td-grey-3);
-  margin: 0 0.25rem;
-  font-weight: var(--fw-regular);
-}
-
-.products__details {
+.products__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  text-align: left;
+  gap: 1.25rem;
 }
 
-.products__detail {
+.product-card {
+  position: relative;
+  background: var(--td-common-white);
+  border-radius: 20px;
+  padding: 1.5rem 1.35rem 1.75rem;
+  border: 1px solid rgba(32, 40, 45, 0.06);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: 1rem;
-  border-radius: var(--radius-sm);
-  background: var(--td-common-white);
-  border: 1px solid var(--td-common-line);
 }
 
-.products__detail strong {
-  font-size: var(--text-xs);
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  min-height: 3.5rem;
+}
+
+.product-card__badge-slot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.product-card__badge {
+  font-size: 0.75rem;
   font-weight: var(--fw-semibold);
-  line-height: var(--lh-heading);
-  color: var(--td-theme-primary);
+  text-transform: capitalize;
+  color: var(--brand-on-accent);
+  background: var(--badge-mint);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
 }
 
-.products__detail span {
+.product-card__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(11, 234, 162, 0.12) 0%, #f5f9ff 100%);
+  border: 1px solid rgba(11, 234, 162, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--brand-accent-hover);
+}
+
+.product-card__title {
+  font-size: 1.125rem;
+  font-weight: var(--fw-semibold);
+  margin-top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  line-height: 1.35;
+}
+
+.product-card__arrow {
+  flex-shrink: 0;
+  font-size: 1.125rem;
+  color: var(--brand-accent-hover);
+  margin-top: 0.1rem;
+}
+
+.product-card__desc {
+  margin-top: 0.5rem;
   font-size: var(--text-xs);
   color: var(--td-grey-2);
   line-height: var(--lh-link);
+  flex: 1;
+}
+
+.products__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
 @media (max-width: 900px) {
-  .products__details {
-    grid-template-columns: repeat(2, 1fr);
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    padding-top: 3rem;
   }
 }
 
-@media (max-width: 540px) {
-  .products__details {
-    grid-template-columns: 1fr;
+@media (min-width: 901px) and (max-width: 1100px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

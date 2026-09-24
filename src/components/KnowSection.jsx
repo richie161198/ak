@@ -3,9 +3,20 @@ import "./KnowSection.css";
 
 export default function KnowSection() {
   return (
-    <section className="know full-section" id="about">
+    <section className="know full-section section-band" id="about">
       <div className="container">
-        <h2 className="section-title">All you should know</h2>
+        <header className="section-header">
+          <span className="eyebrow">Expert guidance</span>
+          <h1 className="section-title know__title">
+            Choosing investments is easy —
+            <br />
+            choosing the right ones isn&apos;t
+          </h1>
+          {/* <p>
+            That&apos;s where disciplined advice makes the difference. The right
+            partner helps you invest with clarity and stay focused on your goals.
+          </p> */}
+        </header>
 
         <div className="know__grid">
           <div className="know__list">
@@ -24,7 +35,7 @@ export default function KnowSection() {
             ))}
           </div>
 
-          <div className="know__comparison card card-muted">
+          <div className="know__comparison card card-muted ">
             <div className="know__compare-side">
               <h3>{comparison.left.title}</h3>
               <ul>

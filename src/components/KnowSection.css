@@ -2,6 +2,16 @@
   max-height: calc(100dvh - 2 * 48px);
 }
 
+.know .section-header {
+  max-width: min(56rem, 100vw);
+  margin-bottom: 2.5rem;
+}
+
+.know__title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.2;
+}
+
 .know__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,15 +24,20 @@
 .know__list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.625rem;
   overflow-y: auto;
   max-height: 100%;
 }
 
 .know__item {
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.125rem;
   overflow: hidden;
   flex-shrink: 0;
+}
+
+.know__item[open] {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(32, 40, 45, 0.12);
 }
 
 .know__question {
@@ -52,7 +67,7 @@
 .know__answer {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--td-common-line);
+  border-top: 1px solid rgba(32, 40, 45, 0.08);
   font-size: var(--text-sm);
   color: var(--td-grey-2);
   line-height: var(--lh-body);
@@ -64,6 +79,7 @@
   min-height: 0;
   height: 100%;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .know__compare-side {
@@ -78,6 +94,14 @@
   line-height: var(--lh-heading);
   margin-bottom: 1rem;
   color: var(--td-grey-3);
+}
+
+.know__compare-side--highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 249, 255, 0.5) 0%,
+    transparent 100%
+  );
 }
 
 .know__compare-side--highlight h3 {
@@ -125,21 +149,21 @@
   right: 2rem;
   top: 50%;
   height: 1px;
-  background: var(--td-common-line);
+  background: rgba(32, 40, 45, 0.1);
 }
 
 .know__vs span {
   position: relative;
   z-index: 1;
-  background: var(--td-grey-1);
-  padding: 0.35rem 1rem;
+  background: var(--td-theme-primary);
+  color: var(--td-common-white);
+  padding: 0.4rem 1.125rem;
   border-radius: 999px;
-  border: 1px solid var(--td-common-line);
   font-family: var(--font-heading);
   font-weight: var(--fw-semibold);
   font-size: var(--text-xs);
   line-height: var(--lh-heading);
-  color: var(--td-theme-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 900px) {

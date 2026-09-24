@@ -17,10 +17,11 @@ export function FaqTwo() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="container">
-        <div className="faq__header">
-          <span className="faq__label">Impressions</span>
-          <h2 className="faq__title">Fun fact about company</h2>
-        </div>
+        <header className="section-header">
+          <span className="eyebrow">Impressions</span>
+          <h2 className="section-title">Fun fact about company</h2>
+          <p>Quick insights into how we think, operate, and support investors.</p>
+        </header>
 
         <div className="faq__list">
           {funFacts.map((item, index) => {
@@ -29,7 +30,7 @@ export function FaqTwo() {
             return (
               <article
                 key={item.question}
-                className={`faq__item ${isOpen ? "faq__item--active" : ""}`}
+                className={`faq__item card ${isOpen ? "faq__item--active" : ""}`}
               >
                 <button
                   type="button"

@@ -1,13 +1,24 @@
+export const LOGIN_URL = "https://aktineu.investwell.app/app/#/login";
+
 export const navLinks = [
   { label: "Plan your goals", href: "#goals" },
-  { label: "Products", href: "#products" },
+  { label: "Our products", href: "#products" },
   { label: "About us", href: "#about" },
-  { label: "Blogs", href: "#faq" },
+  { label: "FAQ", href: "#faq" },
+];
+
+export const heroGoals = [
+  "Retirement",
+  "Child's Education",
+  "Wealth Creation",
+  "Buying a Home",
+  "Emergency Funds",
 ];
 
 export const stats = [
-  { value: "60+", label: "Crore Funds managing" },
-  { value: "200+", label: "Clients Handled" },
+  { value: "60+", label: "Crore funds managing", highlight: true },
+  { value: "200+", label: "Clients handled" },
+  { value: "400+", label: "Schemes reviewed" },
 ];
 
 export const whyChooseItems = [
@@ -62,32 +73,74 @@ export const comparison = {
 export const processCards = [
   {
     id: "investment-process",
+    step: 1,
     title: "Investment Process",
     description:
       "From deep fund research and client profiling to tactical rebalancing — a disciplined process built around your goals.",
+    icon: "fa-user",
+    tone: "one",
   },
   {
     id: "portfolio-framework",
+    step: 2,
     title: "Portfolio Framework (TRI)",
     description:
       "A structured framework aligning time horizon, risk appetite, and investment objectives for sustainable wealth creation.",
+    icon: "fa-gear",
+    tone: "two",
   },
   {
     id: "investor-lifecycle",
+    step: 3,
     title: "Investor Lifecycle",
     description:
       "Onboarding, goal mapping, portfolio execution, periodic reviews, and rebalancing — guiding you at every stage of your financial journey.",
-    fullWidth: true,
+    icon: "fa-chart-line",
+    tone: "three",
   },
 ];
 
 export const products = [
-  { abbr: "MF", name: "Mutual Fund Distribution", description: "Low-cost entry to steady, long-term compounding." },
-  { abbr: "PMS", name: "Portfolio Management Services", description: "Professionally managed bespoke portfolios." },
-  { abbr: "AIFS", name: "Alternative Investment Fund", description: "Advanced strategies for accredited investors." },
-  { abbr: "FD", name: "Fixed Income Instruments", description: "Predictable cash flows and risk mitigation." },
-  { abbr: "SIF", name: "Structured Investment Funds", description: "Tailored solutions for complex wealth needs." },
-  { abbr: "Gift City", name: "Gift City Investments", description: "Global investment access through IFSC routes." },
+  {
+    abbr: "MF",
+    icon: "fa-chart-pie",
+    name: "Mutual Funds",
+    description:
+      "Expert-managed portfolios, built for every goal and risk appetite.",
+    badge: "Most popular",
+  },
+  {
+    abbr: "PMS",
+    icon: "fa-briefcase",
+    name: "Portfolio Management",
+    description: "Professionally managed bespoke portfolios for serious wealth.",
+    badge: "Expert managed",
+  },
+  {
+    abbr: "AIF",
+    icon: "fa-gem",
+    name: "Alternative Investments",
+    description: "Advanced strategies beyond traditional fund offerings.",
+    badge: "Advanced",
+  },
+  {
+    abbr: "FD",
+    icon: "fa-shield-halved",
+    name: "Fixed Income",
+    description: "Predictable cash flows and risk mitigation.",
+  },
+  {
+    abbr: "SIF",
+    icon: "fa-cubes",
+    name: "Structured Funds",
+    description: "Tailored solutions for complex wealth needs.",
+  },
+  {
+    abbr: "Gift City",
+    icon: "fa-earth-americas",
+    name: "Gift City",
+    description: "Global investment access through IFSC routes.",
+  },
 ];
 
 export const testimonials = [
